@@ -18,6 +18,7 @@ Example usage:
 ['13.64.0.0/16', '13.65.0.0/16'...
 ```
 
-Help documentation: https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners
-Source file is gotten from: https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519
-CIDR Format: https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+Useful links:
+* [Help documentation](https://help.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners)
+* [Source file is gotten from](https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519)
+* [CIDR Format](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
