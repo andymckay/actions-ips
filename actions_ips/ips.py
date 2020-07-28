@@ -42,6 +42,9 @@ def cidrs():
     ips.add("208.83.5.228/31")
     ips.add("208.83.5.230/32")
 
+    # MacCloud v2 IPs
+    ips.add("143.55.64.0/23")
+
     for line in data["values"]:
         if line["name"] in zones:
             for address in line["properties"]["addressPrefixes"]:
