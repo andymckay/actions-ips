@@ -51,10 +51,18 @@ def cidrs():
                 ips.add(address)
 
     def sort(address):
-        bits = address.split(".")
-        # Lets split the last on the / to make it easy to order.
-        last = bits[-1].split("/")
-        return list(map(int, bits[:3] + last))
+        version = "ipv6" if ":" in address else "ipv4"
+        if version == "ipv4":
+            bits = address.split(".")
+            last = bits[-1].split("/")
+            return list(map(int, bits[:3] + last))
+        else:
+            def int16(x):
+                if not x:
+                    return 0
+                return int(x.replace('/', ''), 16)
+            bits = address.split(":")
+            return list(map(int16, bits))
 
     ips = sorted(ips, key=sort)
     return ips
