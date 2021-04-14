@@ -22,7 +22,7 @@ def cidrs():
     response.raise_for_status()
     data = response.json()
 
-    zones = [
+    regions = [
         "AzureCloud.eastus2",  # EUS2
         "AzureCloud.eastus",  # EUS
         "AzureCloud.westus",  # WUS
@@ -43,7 +43,7 @@ def cidrs():
     ips.add("208.83.5.230/32")
 
     for line in data["values"]:
-        if line["name"] in zones:
+        if line["name"] in regions:
             for address in line["properties"]["addressPrefixes"]:
                 ips.add(address)
 
