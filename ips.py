@@ -34,13 +34,8 @@ def cidrs():
     ips = set()
 
     # Add in the hard coded Mac IPs in CIDR format to join the downloaded IPs.
-    ips.add("199.7.166.9/32")
-    ips.add("199.7.166.10/31")
-    ips.add("199.19.85.25/32")
-    ips.add("199.19.85.26/31")
-    ips.add("208.83.5.226/31")
-    ips.add("208.83.5.228/31")
-    ips.add("208.83.5.230/32")
+    for line in open('macips.txt'):
+        ips.add(line.strip())
 
     for line in data["values"]:
         if line["name"] in regions:
