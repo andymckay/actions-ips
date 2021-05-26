@@ -34,7 +34,7 @@ def cidrs():
     ips = set()
 
     # Add in the hard coded Mac IPs in CIDR format to join the downloaded IPs.
-    for line in open('macips.txt'):
+    for line in open("macips.txt"):
         ips.add(line.strip())
 
     for line in data["values"]:
