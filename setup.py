@@ -6,7 +6,7 @@ install_requires = [
 
 setup(
     name="actions-ips",
-    version="0.3.2",
+    version="0.3.3",
     description="A list of the GitHub Actions IP Addresses",
     author="Andy McKay",
     author_email="andymckay@github.com",
@@ -14,6 +14,7 @@ setup(
     url="https://github.com/andymckay/actions-ips",
     zip_safe=True,
     packages=['actions_ips'],
+    data_files=['actions_ips/macips.txt'],
     install_requires=install_requires,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
