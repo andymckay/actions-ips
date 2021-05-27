@@ -14,7 +14,6 @@ setup(
     url="https://github.com/andymckay/actions-ips",
     zip_safe=True,
     packages=['actions_ips'],
-    data_files=['actions_ips/macips.txt'],
     install_requires=install_requires,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
