@@ -13,9 +13,8 @@ setup(
     license="MIT",
     url="https://github.com/andymckay/actions-ips",
     zip_safe=True,
-    packages=find_packages(),
+    packages=['actions_ips'],
     install_requires=install_requires,
-    data_files=['macips.txt'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: MIT License',
