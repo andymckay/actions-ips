@@ -1,3 +1,4 @@
+import os
 import re
 import requests
 import subprocess
@@ -6,6 +7,8 @@ import time
 
 start_url = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=56519"
 lookup_regex = re.compile(r"https://download\.microsoft\.com/download/(.*?)\.json")
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 
 def cidrs():
     page = requests.get(start_url)
@@ -34,7 +37,7 @@ def cidrs():
     ips = set()
 
     # Add in the hard coded Mac IPs in CIDR format to join the downloaded IPs.
-    for line in open("macips.txt"):
+    for line in open(os.path.join(dir_path, "macips.txt")):
         ips.add(line.strip())
         
     for line in data["values"]:
