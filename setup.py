@@ -6,7 +6,7 @@ install_requires = [
 
 setup(
     name="actions-ips",
-    version="0.3.4",
+    version="0.3.5",
     description="A list of the GitHub Actions IP Addresses",
     author="Andy McKay",
     author_email="andymckay@github.com",
