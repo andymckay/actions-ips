@@ -108,6 +108,7 @@ def cidrs():
         "AzureCloud.eastus",  # EUS
         "AzureCloud.westus",  # WUS
         "AzureCloud.westus2",  # WUS2
+        "AzureCloud.westus3",  # WUS3
         "AzureCloud.centralus",  # CUS
         "AzureCloud.southcentralus",  # SCUS
     ]
