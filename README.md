@@ -1,3 +1,14 @@
+**Update:** for a while these IPs have been available from the GitHub Meta API as well at https://docs.github.com/en/rest/reference/meta#get-github-meta-information. This library doesn't get much usage and given it's in the API, you can just go get it from there.
+
+Here's how to get it in Python:
+
+```
+>>> import requests
+>>> requests.get("https://api.github.com/meta").json()["actions"]
+['13.64.0.0/16', '13.65.0.0/16'...
+```
+---
+
 This is a Python module to tell you the IP Addresses that GitHub Actions runs on. It does this by grabbing a file from Microsoft's site, parsing it and outputting the IP ranges in CIDR format for you to consume.
 
 IP ranges are in both IPv4 and IPv6 formats.
